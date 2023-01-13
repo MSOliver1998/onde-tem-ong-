@@ -211,7 +211,7 @@ const RegisterPage = () => {
                       <option value="Animais">Animais</option>
                       <option value="Povos nativos">Povos nativos</option>
                       <option value="Tecnologia">Tecnologia</option>
-                      <option value="Animais">Animais</option>
+                      <option value="Animais">crianças</option>
                     </select>
                     <div
                       className={
