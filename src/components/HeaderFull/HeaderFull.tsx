@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import OndeTemOng from "../../assets/imgs/ondeTemOng.svg";
+import OndeTemOng from "../../assets/imgs/Logo.house.png";
 import { AuthContext } from "../../contexts/AuthContext/AuthContext";
 import noUser from "../../assets/imgs/noUser.svg";
 import { StyledHeaderFull } from "./StyledHeaderFull";
@@ -19,11 +19,17 @@ const HeaderFull = ({ linkText, linkTo }: iHeaderProps) => {
     <StyledHeaderFull>
       <div>
         <header>
-          <img
-            className="image_logo"
-            src={OndeTemOng}
-            alt="Onde Tem Ong Logotipo"
-          />
+          <div className="logo">
+            <img
+              className="image_logo"
+              src={OndeTemOng}
+              alt="Onde Tem Ong Logotipo"
+            />
+            <h1 className="text_logo">
+              OndeTemOng?
+            </h1>
+
+          </div>
           <div>
             <Link to={userInfo.id ? "/profile" : "/login"}>
               <img

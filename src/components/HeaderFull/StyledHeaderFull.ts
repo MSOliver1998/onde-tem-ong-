@@ -1,11 +1,40 @@
 import styled from "styled-components";
 
 export const StyledHeaderFull = styled.div`
+
+  @keyframes logoApear{
+    from{
+      width: 0px;
+      margin-left: -30%;
+    }
+    to{
+      width: 200%;
+      margin-left: -70%;
+    }
+  }
+
   height: 84px;
   /* display: flex;
   align-items: center;
   justify-content: center; */
   width: 100%;
+
+  .logo{
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+      img{
+        height: 100px;
+        background-color: white;
+        z-index: 2;
+        margin: 0px 0px  0px 260px ;
+        padding: 0px 250px 0px 0px;
+      }
+      h1{
+        color:var(--Color-primary-50);
+        animation: logoApear 4s ease-in-out alternate infinite;
+      }
+  }
 
   > div {
     width: 100%;

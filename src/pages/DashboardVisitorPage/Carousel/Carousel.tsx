@@ -33,7 +33,7 @@ const Carousel = () => {
 
   return (
     <>
-      <Swiper
+      <Swiper 
         breakpoints={{
           966: {
             width: 966,
