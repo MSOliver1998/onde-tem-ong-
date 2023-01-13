@@ -3,12 +3,6 @@ import styled from "styled-components";
 
 export const FormEditOngStyled = styled.form`
 
-@keyframes loading {
-  to{
-    transform: rotate(1turn);
-  }
-}
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,19 +39,6 @@ export const FormEditOngStyled = styled.form`
     border-radius: 6px;
     padding: 20px;
     width: 100%;
-  }
-
-  > button:disabled{
-    margin: 0 auto;
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-    padding: 0px;
-    border: 5px solid var(--Color-primary);
-    background-color: transparent;
-    border-top-color: white ;
-    font-size: 0px;
-    animation: loading 1s infinite;
   }
 
   > div {

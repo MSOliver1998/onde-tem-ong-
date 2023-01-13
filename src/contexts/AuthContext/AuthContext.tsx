@@ -93,18 +93,6 @@ export const AuthProvider = ({ children }: iAuthProvider) => {
     } finally {
       setLoading(false);
     }
-    try {
-      const response = await api.post("/login", data);
-      navigate("/dashboard");
-      localStorage.setItem("@token", response.data.accessToken);
-      localStorage.setItem("@id", response.data.user.id);
-      setUserInfo(response.data.user);
-      toast.success("Login realizado com sucesso!");
-    } catch (err: any) {
-      toast.error(err.response.data);
-    } finally {
-      setLoading(false);
-    }
   };
 
   const registerSubmit = async (data: iRegisterData) => {
@@ -116,7 +104,6 @@ export const AuthProvider = ({ children }: iAuthProvider) => {
       );
       localStorage.clear();
       localStorage.setItem("USERID", response.data.accessToken);
-      toast.success("Usuário criado com sucesso!");
       toast.success("Usuário criado com sucesso!");
       navigate("/login");
     } catch (error: any) {

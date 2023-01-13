@@ -144,6 +144,9 @@ export const FormDonateStyled = styled.form`
     }
   }
 
+  
+
+
   @media (min-width: 768px) {
     max-width: 100%;
 
