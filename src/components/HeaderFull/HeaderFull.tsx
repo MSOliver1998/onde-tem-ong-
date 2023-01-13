@@ -26,7 +26,7 @@ const HeaderFull = ({ linkText, linkTo }: iHeaderProps) => {
               alt="Onde Tem Ong Logotipo"
             />
             <h1 className="text_logo">
-              OndeTemOng?
+              Onde Tem Ong?
             </h1>
 
           </div>

@@ -2,14 +2,21 @@ import styled from "styled-components";
 
 export const StyledHeaderFull = styled.div`
 
-  @keyframes logoApear{
+  @keyframes cursor{
     from{
-      width: 0px;
-      margin-left: -30%;
+      border-right-color: transparent
     }
     to{
-      width: 200%;
-      margin-left: -70%;
+      border-right-color: rgba(0,0,0,0.2);
+    }
+  }
+
+  @keyframes logoApear{
+    from{
+      width: 0px
+    }
+    to{
+      width: 100%;
     }
   }
 
@@ -22,17 +29,20 @@ export const StyledHeaderFull = styled.div`
   .logo{
     display: flex;
     align-items: center;
-    padding: 0px 8px;
       img{
-        height: 100px;
+        height:70px;
         background-color: white;
         z-index: 2;
-        margin: 0px 0px  0px 260px ;
-        padding: 0px 250px 0px 0px;
+        margin: 0px 0px;
+        padding: 0px;
       }
       h1{
         color:var(--Color-primary-50);
-        animation: logoApear 4s ease-in-out alternate infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 24px;
+        border-right: 2px solid rgba(0,0,0,0.2);
+        animation: cursor 500ms steps(40) infinite normal, logoApear 4s steps(40) 1s infinite alternate ;
       }
   }
 
@@ -55,7 +65,7 @@ export const StyledHeaderFull = styled.div`
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 15px;
+    margin: 0px 30px;
     padding: 10px 0;
     background: var(--Withe);
     align-items: center;
@@ -64,7 +74,7 @@ export const StyledHeaderFull = styled.div`
 
   header > div > a > img {
     cursor: pointer;
-    width: 50px;
+    width: 70px;
     object-fit: cover;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 26px -12px rgba(0, 0, 0, 0.75);
